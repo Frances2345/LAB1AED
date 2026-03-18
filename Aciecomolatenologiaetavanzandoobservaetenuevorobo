@@ -1,0 +1,135 @@
+
+1)
+int SumScores( int[] scores)
+{
+  int sum = 0;                                                                           // int es 1                                                         => 1
+  for (int i = 0; i < scores.Length; i++)                                                // int es 1, scores.Lenght es N + 1 y i++ es 1                      => N + 3
+  {
+  sum += scores[i];                                                                      // += es 2 y Scores[i] seria N                                      => N + 2
+  }
+}
+return sum;
+
+T(N): 1 + N + 3 + N + 2
+T(N): 2N + 6
+O(n)= N
+
+2)
+void ComparePlayers(List<GameObject> players)
+{
+    for (int i = 0; i < players.Count; i++)                                              // = es 1, i < players.Count es N + 1, i++ es 1                     => 1 + N + 1 + 1
+    {
+        for (int j = i + 1; j < players.count; j++)                                      // = es 1, i es N, + es 1, players.count es N + 1, j++ es N         => 1 + N + 1 + N + 1 + N
+        {
+        Debug.Log(players[i].name +" vs " + "______________")                           //  Debug.Log es 1, players[i].name es N, + es 1                     => 1 + N + 1 + 1
+        }
+    }
+}
+
+
+N(3N + 6)
+(3N² + 6N)
+
+T(N): 3N² + 6N + N + 3
+T(N): 3N² + 7N + 3
+- ES O(n²) — cuadrática
+
+3)
+int CalculateInteractionScore(int[] players)
+{
+    int score = 0;                                                                       //  = es 1                                                         => 1
+    for (int i = 0; i < players.Length; i++)                                             //  = es 1, players.Length es N + 1, i++ es 1                      => 1 + N + 1 + 1
+    {
+        for (int j = i + 1; j < players.Length; j++)                                     //  = es 1, + es 1, i es N, players.Length es N + 1, j++ es 1      => 1 + 1 + N + N + 1 + 1
+            {
+              int interaction = players[i] + players[j];                                 //  = es 1, players[i] es N, + es 1, players[j] es N               => 1 + N + 1 + N
+              score += interaction;                                                      //  = es 1, + es 1                                                 => 1 + 1
+            }
+      }
+return score;
+}
+
+N(4N + 8)
+4N² + 8N
+T(N): 4N² + 8N + N + 4
+T(N): 4N² + 9N + 4
+- ES O(n²) — cuadrática
+
+
+4)
+int CalculateFinalDamage(int attack, int defense, float multiplier)
+{
+        int baseDamage = attack - defense;                                                //  = es 1, - es 1                                                  => 1 + 1 
+        int finalDamage = (int)(baseDamage * multiplier);                                 //  = es 1, * es 1                                                  => 1 + 1
+ 
+        if (finalDamage < 0)                                                              //  < es 1                                                          => 1 
+        {  
+        finalDamage = 0;                                                                  //  = es 1                                                          => 1 
+        }
+  return finalDamage;                                                                     //  return es 1                                                     => 1                                                                 
+}
+
+T(N): 7
+- ES O(1) — constante
+
+5) 
+bool CanCastSpell(int mana, int cost)
+{
+    int remainingMana = mana - cost;                                                      //  = es 1, - es 1                                                  => 1 + 1          
+    if (remainingMana >= 0)                                                               //  > es 1, = es 1                                                  => 1 + 1  
+    {
+      Debug. Log("Spell casted");                                                         //  Debug.Log es 1                                                  => 1 
+      return true;                                                                        //  return es 1                                                     => 1 
+    }
+    return false;                                                                         //  return es 1                                                     => 1 
+}
+
+
+T(N): 7
+- ES O(1) — constante
+
+6)
+bool HasLowHealthPlayer( int[ ] healthValues)
+{
+    for (int i = 0; i < healthValues.Length; i++)                                        //  = es 1, < es 1, healthValues.Length es N + 1, i++ es 1          => 1 + 1 + N + 1 + 1
+    {
+      int health = healthValues[i];                                                      //  = es 1                                                          => 1 
+      if (health < 30)                                                                   //  < es 1                                                          => 1 
+          {
+            Debug.Log("Low health detected");                                            //  Debug.Log es 1                                                  => 1 
+            return true;                                                                 //  return es 1                                                     => 1 
+          }
+  return false;                                                                          //  return es 1                                                     => 1 
+}
+
+T(N): N + 9
+- ES O(n) — lineal
+
+
+7)
+int CountStrongerPairs(int[] powerLevels)
+{
+    int count = 0;                                                                       //  = es 1                                                         => 1 
+      for (int i = 0; i < powerLevels.Length; i++)                                       //  = es 1, < es 1, powerLevels.Length es N + 1, i++ es 1          => 1 
+      {
+            for (int j = 0; j < powerLevels.Length; j++)
+            {
+                  if (powerLevels[i] > powerLevels[j])
+                  {
+                    count++;
+                  }
+            }
+      }
+      return count;
+}
+
+
+
+
+
+
+Conclusiones:
+
+Me parecio agradable la clase y como se pudo explicar asi un tema un poco complejo, me hubiera gustado un poco de enfasis mas en como difencias cuando es N alguna de las cosas
+
+
