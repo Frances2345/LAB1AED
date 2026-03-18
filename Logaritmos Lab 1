@@ -1,3 +1,6 @@
+TAREA LOGARITMOS LAB 1:
+___________________________________________________________________________________________________________________________________________________________________________________________
+
 
 1)
 int SumScores( int[] scores)
@@ -13,6 +16,8 @@ return sum;
 T(N): 1 + N + 3 + N + 2
 T(N): 2N + 6
 O(n)= N
+
+___________________________________________________________________________________________________________________________________________________________________________________________
 
 2)
 void ComparePlayers(List<GameObject> players)
@@ -33,6 +38,8 @@ N(3N + 6)
 T(N): 3N² + 6N + N + 3
 T(N): 3N² + 7N + 3
 - ES O(n²) — cuadrática
+
+___________________________________________________________________________________________________________________________________________________________________________________________
 
 3)
 int CalculateInteractionScore(int[] players)
@@ -55,6 +62,7 @@ T(N): 4N² + 8N + N + 4
 T(N): 4N² + 9N + 4
 - ES O(n²) — cuadrática
 
+___________________________________________________________________________________________________________________________________________________________________________________________
 
 4)
 int CalculateFinalDamage(int attack, int defense, float multiplier)
@@ -72,6 +80,9 @@ int CalculateFinalDamage(int attack, int defense, float multiplier)
 T(N): 7
 - ES O(1) — constante
 
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+
 5) 
 bool CanCastSpell(int mana, int cost)
 {
@@ -87,6 +98,9 @@ bool CanCastSpell(int mana, int cost)
 
 T(N): 7
 - ES O(1) — constante
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
 
 6)
 bool HasLowHealthPlayer( int[ ] healthValues)
@@ -105,6 +119,7 @@ bool HasLowHealthPlayer( int[ ] healthValues)
 T(N): N + 9
 - ES O(n) — lineal
 
+___________________________________________________________________________________________________________________________________________________________________________________________
 
 7)
 int CountStrongerPairs(int[] powerLevels)
@@ -112,7 +127,7 @@ int CountStrongerPairs(int[] powerLevels)
     int count = 0;                                                                       //  = es 1                                                         => 1 
       for (int i = 0; i < powerLevels.Length; i++)                                       //  = es 1, < es 1, powerLevels.Length es N + 1, i++ es 1          => 1 
       {
-            for (int j = 0; j < powerLevels.Length; j++)                                 //  = es 1, < es 1, powerLevels.Length es N + 1, i++ es 1          => 1 
+            for (int j = 0; j < powerLevels.Length; j++)                                 //  = es 1, < es 1, powerLevels.Length es N + 1, j++ es 1          => 1 
             {
                   if (powerLevels[i] > powerLevels[j])
                   {
@@ -127,7 +142,7 @@ int CountStrongerPairs(int[] powerLevels)
 
 
 
-
+___________________________________________________________________________________________________________________________________________________________________________________________
 Conclusiones:
 
 Me parecio agradable la clase y como se pudo explicar asi un tema un poco complejo, me hubiera gustado un poco de enfasis mas en como difencias cuando es N alguna de las cosas
