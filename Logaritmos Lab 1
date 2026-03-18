@@ -125,17 +125,17 @@ ________________________________________________________________________________
 int CountStrongerPairs(int[] powerLevels)
 {
     int count = 0;                                                                       //  = es 1                                                         => 1 
-      for (int i = 0; i < powerLevels.Length; i++)                                       //  = es 1, < es 1, powerLevels.Length es N + 1, i++ es 1          => 1 
+      for (int i = 0; i < powerLevels.Length; i++)                                       //  = es 1, < es 1, powerLevels.Length es N + 1, i++ es 1          => 1 + 1 + N + 1 + 1
       {
-            for (int j = 0; j < powerLevels.Length; j++)                                 //  = es 1, < es 1, powerLevels.Length es N + 1, j++ es 1          => 1 
+            for (int j = 0; j < powerLevels.Length; j++)                                 //  = es 1, < es 1, powerLevels.Length es N + 1, j++ es 1          => 1 + 1 + N + 1 + 1 
             {
-                  if (powerLevels[i] > powerLevels[j])
+                  if (powerLevels[i] > powerLevels[j])                                   //  > es 1, powerLevels[i] es 1, powerLevels[j] es 1               => 1 + 1 + 1
                   {
-                    count++;
+                    count++;                                                             //  count es N                                                      => N
                   }
             }
       }
-      return count;
+      return count;                                                                     //  return es 1, count es N                                        => 1 + N
 }
 
 
