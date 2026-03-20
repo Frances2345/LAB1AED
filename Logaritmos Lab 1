@@ -5,8 +5,8 @@ ________________________________________________________________________________
 1)
 int SumScores( int[] scores)
 {
-  int sum = 0;                                                                           // int es 1                                                         => 1
-  for (int i = 0; i < scores.Length; i++)                                                // int es 1, scores.Lenght es N + 1 y i++ es 1                      => N + 3
+  int sum = 0;                                                                           // = es 1                                                           => 1
+  for (int i = 0; i < scores.Length; i++)                                                // = es 1, scores.Length es N + 1 y i++ es 1                        => N + 3
   {
   sum += scores[i];                                                                      // += es 2 y Scores[i] seria N                                      => N + 2
   }
